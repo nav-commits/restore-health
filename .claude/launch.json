@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "restore-health-dev",
+      "runtimeExecutable": "/Users/nav/.nvm/versions/node/v20.19.2/bin/node",
+      "runtimeArgs": [
+        "/Users/nav/Documents/restore-health/node_modules/next/dist/bin/next",
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}
