@@ -31,7 +31,7 @@ export function Logo({ className }: { className?: string }) {
       width={801}
       height={312}
       priority
-      className={cn("h-12 w-auto", className)}
+      className={cn("h-17 w-auto", className)}
     />
   );
 }
@@ -42,7 +42,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-6 lg:px-8">
         <Link
           href="/"
           className="rounded-lg focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
