@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { FileText, Microscope, Syringe, Clock3, ShieldCheck } from "lucide-react";
 
 import { Hero } from "@/components/Hero";
@@ -138,7 +139,17 @@ export default function PhysiciansPage() {
               When IV iron is recommended, RestoreHealth coordinates the
               prescription and referral to a trusted local infusion clinic
               near your patient, keeping the pathway from assessment to
-              treatment as short as possible.
+              treatment as short as possible. For eligible IDA patients, we
+              manage Ontario Limited Use (LU Code 610) funding
+              authorization directly; for NAID patients, we coordinate
+              private/insurance or out-of-pocket pathways. See the full{" "}
+              <Link
+                href="/patients#ontario-funding-pathways"
+                className="text-primary-700 underline underline-offset-2"
+              >
+                Ontario funding pathways
+              </Link>{" "}
+              for details.
             </p>
           </div>
         </div>

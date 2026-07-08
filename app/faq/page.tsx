@@ -23,13 +23,13 @@ const FAQ_ITEMS = [
   {
     question: "Will my IV Iron treatment be covered by Ontario Public Funding?",
     answer:
-      "Coverage depends on your diagnosis and whether you meet the clinical criteria set out under Ontario's public drug programs. Patients with confirmed Iron Deficiency Anemia are generally more likely to qualify for public coverage than those with Non-Anemic Iron Deficiency. Your specialist will review your lab results and confirm your eligibility during your assessment.",
+      "Patients with a confirmed Iron Deficiency Anemia (IDA) diagnosis can qualify for public funding of Monoferric (ferric derisomaltose) through Ontario's Limited Use drug program. Eligibility requires that oral iron has failed after at least a 4-week trial, or that there is documented intolerance or a contraindication to oral iron. When these criteria are met, your specialist submits a Limited Use (LU Code 610) authorization and treatment is funded through OHIP+, ODB, or the Trillium Drug Program.",
   },
   {
     question:
       "What if I have Non-Anemic Iron Deficiency and do not qualify for public funding?",
     answer:
-      "If you do not qualify for public funding, your specialist will discuss private insurance coverage and out-of-pocket options with you, so you have a clear understanding of your choices before deciding whether to proceed with treatment.",
+      "Non-Anemic Iron Deficiency (NAID) does not generally qualify for Ontario's public drug programs, but most private and workplace insurance plans cover IV iron formulations, and eligibility is usually confirmed in a single virtual visit. If you don't have coverage, an out-of-pocket option is available &mdash; your specialist will confirm your coverage and walk you through the cost before proceeding.",
   },
   {
     question: "How much does Monoferric cost if paying out-of-pocket?",

@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Video, ClipboardList, Syringe, CreditCard, CheckCircle2 } from "lucide-react";
+import {
+  Video,
+  ClipboardList,
+  Syringe,
+  CheckCircle2,
+  Landmark,
+  Wallet,
+} from "lucide-react";
 
 import { Hero } from "@/components/Hero";
 import { MedicalCards } from "@/components/MedicalCards";
@@ -83,40 +90,129 @@ export default function PatientsPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20" aria-labelledby="funding-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-accent-50 p-8 sm:p-10">
-            <div className="flex items-center gap-3">
-              <CreditCard className="size-7 text-accent-600" aria-hidden="true" />
-              <h2
-                id="funding-heading"
-                className="font-heading text-2xl font-medium text-text sm:text-3xl"
-              >
-                Funding Information
-              </h2>
-            </div>
-            <p className="mt-4 text-base leading-relaxed text-text-muted">
-              Coverage for IV iron treatment can vary depending on your
-              diagnosis, provincial and private insurance coverage, and
-              eligibility under Ontario&rsquo;s public drug programs. During
-              your assessment, your specialist will review the funding
-              options available to you, including public coverage where you
-              qualify and private or out-of-pocket alternatives, so you have
-              a clear understanding of costs before proceeding with
-              treatment.
+      <section
+        id="ontario-funding-pathways"
+        className="scroll-mt-24 py-16 sm:py-20"
+        aria-labelledby="funding-heading"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary-600">
+              Funding Information
             </p>
-            <p className="mt-3 text-base leading-relaxed text-text-muted">
-              Have specific questions about funding? Visit our{" "}
-              <Link href="/faq" className="text-primary-700 underline underline-offset-2">
-                FAQ page
-              </Link>{" "}
-              or{" "}
-              <Link href="/contact" className="text-primary-700 underline underline-offset-2">
-                contact our care team
-              </Link>
-              .
+            <h2
+              id="funding-heading"
+              className="mt-3 font-heading text-3xl font-medium text-text sm:text-4xl"
+            >
+              Ontario Funding Pathways
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-text-muted">
+              How your IV iron treatment is funded depends on your
+              diagnosis. Your specialist confirms which pathway applies to
+              you during your assessment.
             </p>
           </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-surface p-7 shadow-premium-sm sm:p-8">
+              <div className="flex items-center gap-3">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-600">
+                  <Landmark className="size-6" aria-hidden="true" />
+                </div>
+                <span className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-700">
+                  Publicly Funded
+                </span>
+              </div>
+              <h3 className="mt-5 font-heading text-xl font-medium text-text">
+                Iron Deficiency Anemia (IDA) &mdash; OHIP Pathway
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                For patients with a confirmed IDA diagnosis, treatment with
+                Monoferric (ferric derisomaltose) can qualify for public
+                funding under Ontario&rsquo;s Limited Use drug program.
+              </p>
+              <p className="mt-4 text-sm font-medium text-text">
+                Eligibility is confirmed when:
+              </p>
+              <ul className="mt-2 space-y-2 text-sm text-text-muted">
+                {[
+                  "A confirmed Iron Deficiency Anemia diagnosis is on file",
+                  "Oral iron has failed after at least a 4-week trial",
+                  "There is documented intolerance to oral iron, or",
+                  "There is a contraindication to oral iron",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2
+                      className="mt-0.5 size-4 shrink-0 text-primary-600"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 rounded-xl bg-primary-50 p-4 text-sm leading-relaxed text-primary-700">
+                When these criteria are met, your specialist submits a
+                Limited Use (LU Code 610) authorization and Monoferric is
+                publicly funded through OHIP+, ODB, or the Trillium Drug
+                Program.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-surface p-7 shadow-premium-sm sm:p-8">
+              <div className="flex items-center gap-3">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-accent-50 text-accent-600">
+                  <Wallet className="size-6" aria-hidden="true" />
+                </div>
+                <span className="inline-flex items-center rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-600">
+                  Private / Insurance
+                </span>
+              </div>
+              <h3 className="mt-5 font-heading text-xl font-medium text-text">
+                Non-Anemic Iron Deficiency (NAID) &mdash; Private/Insurance
+                Pathway
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                NAID does not generally qualify for Ontario&rsquo;s public
+                drug programs, but most private and workplace insurance
+                plans cover IV iron formulations.
+              </p>
+              <p className="mt-4 text-sm font-medium text-text">
+                What to expect:
+              </p>
+              <ul className="mt-2 space-y-2 text-sm text-text-muted">
+                {[
+                  "Premium insurance plans typically cover treatment",
+                  "Eligibility is usually confirmed in a single virtual visit",
+                  "An out-of-pocket option is available if you don't have coverage",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2
+                      className="mt-0.5 size-4 shrink-0 text-accent-600"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 rounded-xl bg-accent-50 p-4 text-sm leading-relaxed text-text">
+                Your specialist will confirm your coverage and walk you
+                through the out-of-pocket option so you know the full cost
+                before proceeding.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-base text-text-muted">
+            Have specific questions about funding? Visit our{" "}
+            <Link href="/faq" className="text-primary-700 underline underline-offset-2">
+              FAQ page
+            </Link>{" "}
+            or{" "}
+            <Link href="/contact" className="text-primary-700 underline underline-offset-2">
+              contact our care team
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
