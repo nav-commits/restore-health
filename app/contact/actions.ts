@@ -9,8 +9,7 @@ export interface ContactFormResult {
   message: string;
 }
 
-const CONTACT_EMAIL =
-  process.env.CONTACT_EMAIL ?? "Administrator@restorehealth-clinic.com";
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL ?? "navdeep.dhamrait94@gmail.com";
 
 function escapeHtml(value: string) {
   return value
