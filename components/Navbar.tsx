@@ -16,9 +16,9 @@ import {
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { href: "/patients", label: "Patients" },
-  { href: "/physicians", label: "Physicians" },
-  { href: "/about", label: "About Us" },
+  { href: "/patients", label: "For Patients" },
+  { href: "/physicians", label: "For Physicians" },
+  { href: "/about", label: "About Restore Health" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us" },
 ];
@@ -76,7 +76,8 @@ export function Navbar() {
         <div className="hidden lg:block">
           <Button
             render={<Link href="/contact" />}
-            className="bg-primary-600 text-white hover:bg-primary-700"
+            size="lg"
+            className="h-12 bg-primary-600 px-6 text-base text-white hover:bg-primary-700"
           >
             Request a Consultation
           </Button>
@@ -120,7 +121,8 @@ export function Navbar() {
             <div className="mt-auto p-4">
               <Button
                 render={<Link href="/contact" onClick={() => setOpen(false)} />}
-                className="w-full bg-primary-600 text-white hover:bg-primary-700"
+                size="lg"
+                className="h-12 w-full bg-primary-600 px-6 text-base text-white hover:bg-primary-700"
               >
                 Request a Consultation
               </Button>
