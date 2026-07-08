@@ -52,7 +52,7 @@ export function Navbar() {
         </Link>
 
         <nav
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden translate-y-[5px] items-center gap-1 lg:flex"
           aria-label="Primary navigation"
         >
           {NAV_LINKS.map((link) => {
@@ -73,7 +73,7 @@ export function Navbar() {
           })}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden translate-y-[5px] lg:block">
           <Button
             render={<Link href="/contact" />}
             size="lg"
